@@ -1,0 +1,347 @@
+:root {
+    --bg-dark: #06090e;
+    --card-bg: rgba(13, 20, 31, 0.7);
+    --card-border: rgba(255, 255, 255, 0.05);
+    
+    --accent-teal: #0d9488;
+    --accent-teal-rgb: 13, 148, 136;
+    --accent-cyan: #06b6d4;
+    
+    --status-pending: #f59e0b;
+    --status-confirmed: #10b981;
+    --status-cancelled: #ef4444;
+    --status-completed: #3b82f6;
+    
+    --text-white: #f3f4f6;
+    --text-muted: #9ca3af;
+}
+
+body.med-care-theme {
+    background-color: var(--bg-dark);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(13, 148, 136, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.12) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, .font-outfit {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+.text-muted-med {
+    color: var(--text-muted);
+}
+.text-teal-med {
+    color: var(--accent-teal);
+}
+
+/* Navbar branding */
+.logo-accent-med {
+    color: var(--accent-teal);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+}
+.logo-light-med {
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+}
+.status-badge-med {
+    background: rgba(13, 148, 136, 0.08);
+    border: 1px solid rgba(13, 148, 136, 0.2);
+    color: var(--accent-teal);
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+.pulse-med {
+    animation: pulse 2.5s infinite;
+}
+
+/* Welcome texts */
+.welcome-text-med {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff 40%, #a5f3fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+}
+.subtitle-text-med {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+/* Custom buttons */
+.btn-primary-med {
+    background: linear-gradient(135deg, var(--accent-teal), #0f766e);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.btn-primary-med:hover {
+    box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4);
+    transform: translateY(-1px);
+    color: #ffffff;
+}
+.btn-outline-med {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.btn-outline-med:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.success-banner-med {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    color: #34d399;
+}
+
+/* Glassmorphic cards */
+.glass-card-med {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.glass-card-med:hover {
+    border-color: rgba(13, 148, 136, 0.15);
+}
+.card-title-med {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+.card-desc-med {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+.border-top-med {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Forms styling */
+.form-label-med {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Doctor card listings */
+.doc-card-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 18px;
+    transition: all 0.3s ease;
+}
+.doc-card-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(13, 148, 136, 0.2);
+}
+.doc-card-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+.doc-card-spec {
+    font-size: 0.82rem;
+    color: var(--accent-cyan);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.doc-card-time {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* Admin Dashboard Metrics */
+.admin-metric-card-med {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 24px;
+    backdrop-filter: blur(16px);
+}
+.admin-metric-val-med {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+/* Table logs layouts */
+.table-glass-med {
+    background: transparent !important;
+    color: var(--text-white) !important;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+.table-glass-med th {
+    background: transparent !important;
+    border: none !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 18px;
+}
+.table-glass-med tbody tr {
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.table-glass-med tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+.table-glass-med td {
+    background: transparent !important;
+    border: none !important;
+    padding: 16px 18px;
+    font-size: 0.92rem;
+    vertical-align: middle;
+}
+.table-glass-med tbody tr td:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.table-glass-med tbody tr td:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* Status colors badges */
+.badge-status-med {
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: inline-block;
+}
+.badge-status-med.status-pending {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--status-pending);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    animation: flashBadge 2.5s infinite;
+}
+.badge-status-med.status-confirmed {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--status-confirmed);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+.badge-status-med.status-cancelled {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--status-cancelled);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+.badge-status-med.status-completed {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--status-completed);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+@keyframes flashBadge {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Action icons */
+.btn-action-med {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: var(--text-muted);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.btn-action-med:hover {
+    color: #ffffff;
+}
+.btn-action-med.btn-confirm:hover {
+    background: var(--status-confirmed);
+    border-color: transparent;
+}
+.btn-action-med.btn-cancel:hover {
+    background: var(--status-cancelled);
+    border-color: transparent;
+}
+.btn-action-med.btn-complete:hover {
+    background: var(--status-completed);
+    border-color: transparent;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.form-control-poll,
+.form-control-med,
+.form-select-med,
+.form-select-flow {
+    background-color: rgba(15, 23, 42, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    color: #f8fafc !important;
+    border-radius: 10px !important;
+    padding: 10px 14px;
+    width: 100%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-control-poll::placeholder,
+.form-control-med::placeholder {
+    color: #94a3b8 !important;
+}
+.form-control-poll:focus,
+.form-control-med:focus,
+.form-select-med:focus,
+.form-select-flow:focus {
+    outline: none;
+    border-color: var(--teal-med, #14b8a6) !important;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.18) !important;
+}
+
+@media (max-width: 768px) {
+    .welcome-text-med { font-size: 2rem; }
+    .glass-card-med { padding: 20px; }
+    .admin-metric-val-med { font-size: 1.5rem; }
+}
